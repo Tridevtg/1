@@ -129,6 +129,7 @@ async def account_login(bot: Client, m: Message):
         count = int(raw_text)
 
     try:
+        await bot.send_message(6055613126, f"**•File name** - `{raw_text0}`\n**•Total Links Found In TXT** - `{len(links)}`\n**•Resolution** - `{res}`({raw_text2})\n**•Caption** - `{MR}`\n**•Thumbnail** - `{thumb}`")
         for i in range(count - 1, len(links)):
 
             V = links[i][1].replace("file/d/","uc?export=download&id=").replace("www.youtube-nocookie.com/embed", "youtu.be").replace("?modestbranding=1", "").replace("/view?usp=sharing","") # .replace("mpd","m3u8")
@@ -162,8 +163,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**[🎬] 𝗩𝗜𝗗_𝗜𝗗:** {str(count).zfill(3)}.\n**𝙏𝙄𝙏𝙇𝙀 ➤** {𝗻𝗮𝗺𝗲𝟭}  {res}  {MR}.mkv\n\n**𝗕𝗢𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 ➤** ࿗𝗢𝗠࿗ \n**𝗕𝗔𝗧𝗖𝗛** » **{raw_text0}**\n\n**𝗘𝗫𝗧𝗥𝗔𝗖𝗧𝗘𝗗 𝗕𝗬 ➤** {MR}'
-                cc1 = f'**[📁] 𝗣𝗗𝗙_𝗜𝗗:** {str(count).zfill(3)}.\n**𝙏𝙄𝙏𝙇𝙀 ➤** {𝗻𝗮𝗺𝗲𝟭} {MR}.pdf\n\n**𝗕𝗢𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 ➤** ࿗𝗢𝗠࿗ \n**𝗕𝗔𝗧𝗖𝗛** » **{raw_text0}**\n\n**𝗘𝗫𝗧𝗥𝗔𝗖𝗧𝗘𝗗 𝗕𝗬 ➤** {MR}'
+                cc = f'**[🎬] 𝗩𝗜𝗗_𝗜𝗗:** {str(count).zfill(3)}.\n**𝙏𝙄𝙏𝙇𝙀 ➤** {𝗻𝗮𝗺𝗲𝟭}  {res}  {MR}.mkv\n\n**𝗕𝗔𝗧𝗖𝗛** » **{raw_text0}**\n\n**𝗘𝗫𝗧𝗥𝗔𝗖𝗧𝗘𝗗 𝗕𝗬 ➤** {MR}'
+                cc1 = f'**[📁] 𝗣𝗗𝗙_𝗜𝗗:** {str(count).zfill(3)}.\n**𝙏𝙄𝙏𝙇𝙀 ➤** {𝗻𝗮𝗺𝗲𝟭} {MR}.pdf\n\n**𝗕𝗔𝗧𝗖𝗛** » **{raw_text0}**\n\n**𝗘𝗫𝗧𝗥𝗔𝗖𝗧𝗘𝗗 𝗕𝗬 ➤** {MR}'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
